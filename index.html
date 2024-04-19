@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        button{
+            background-color: green;
+        }
+    
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-color: forestgreen;
+            color: white;
+        }
+        ul li{
+            list-style-type: none;
+        }
+        header ul{
+            display: flex;
+            gap: 20px;
+        }
+        header a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            background-color: #95b695;
+        }
+        .section {
+            border-bottom: 2px solid gray;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 60px;
+        }
+        .meio{
+            text-align: center;
+            width: 100%;
+            padding: 70px;
+            background-color: green;
+        }
+        .direita img {
+            width: 75%;
+            box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+        }
+        .direita, .esquerda{
+            width: 50vw;
+        }
+        .projetos{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        background-color: green;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+        }
+
+        #projeto{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: green;
+            min-width: 100px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #95b695;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="logo" >
+                <p>Arthur Lange</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                        <div class="dropdown">
+                            <a href="#" class="dropbtn">Projetos</a>
+                            <div class="dropdown-content">
+                                <a href="#">1º Trimestre</a>
+                                <a href="#">2º Trimestre</a>
+                                <a href="#">3º Trimestre</a>
+                            </div>
+                        </div>  
+                </ul>
+            </nav>
+        </header>
+    <div class="section" id="#home">
+        <div class="esquerda">
+            <h1>Bem Vindo.</h1>
+            <p>Esse é o meu portifólio de desenvolvimento de sistemas.</p>
+        </div>
+        <div class="direita">
+            <img src="https://classic.exame.com/wp-content/uploads/2017/05/programador-senior-monsitj.jpg?quality=70&strip=info&w=1024">
+        </div>    
+    </div> <!-- final da sessão home-->
+       
+    <!-- inicio da sessão sobre -->
+    <div class="section" id="Sobre">
+        <div class="meio">
+            <h2>Sobre mim</h2>
+            <p>
+                Meu nome é Arthur Lange Da Silva, tenho 17 anos, sou de São José (Santa Catarina) e atualmente estou no segundo ano do ensino médio na escola S (Sesi Senai). Na escola S estou cursando o desenvolvimento de sistemas pois dentre as opções essa é a que eu mais me encaixo e me chama a atenção devido a grande procura dessa profissão no mercado de trabalho.<br>
+            </p>
+        </div>
+    </div>
+        
+        <!-- final  de sessão -->
+        <div class="section" id="projeto">
+            <div class="projetos">
+                <img src="data:image/jpeg;base64,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" alt="">
+                <h1>projeto01 </h1>
+                <p>projeto da lua grandona</p>
+            </div>
+        </div>
+    
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<button> Sobre mim</button>
+   
